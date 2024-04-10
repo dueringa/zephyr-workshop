@@ -19,7 +19,8 @@ enum sys_states {
 	 */
 	SYS_STANDBY,
 
-	/* Add your code here */
+	//! System is active
+	SYS_ACTIVE
 
 	/* */
 };

@@ -39,6 +39,10 @@ static void button_msg_cb(const struct zbus_channel *chan)
 		LOG_INF("System state standby");
 		break;
 	case SYS_STANDBY:
+		sys_state = SYS_ACTIVE;
+		LOG_INF("System state active");
+		break;
+	case SYS_ACTIVE:
 		sys_state = SYS_SLEEP;
 		LOG_INF("System state sleep");
 		break;

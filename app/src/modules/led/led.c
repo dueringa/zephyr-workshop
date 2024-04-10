@@ -74,7 +74,12 @@ static void led_fn(void)
 			/* Blinking led, blocking wait not possible */
 			ret = zbus_sub_wait(&led_subscriber, &chan, K_NO_WAIT);
 			break;
-		/* Add your code here */
+		case SYS_ACTIVE:
+			gpio_pin_set_dt(&led, 1);
+			printk("LED on\n");
+			/* Nothing to do, blocking wait to save energy */
+			ret = zbus_sub_wait(&led_subscriber, &chan, K_FOREVER);
+			break;
 
 		/* */
 		default:
