@@ -1,0 +1,17 @@
+Cloud development
+-----------------
+
+-- Gitpod ?
+
+Applications
+------------
+
+jakkra/ZSWatch
+
+
+runtime power management
+
+
+zephyrproject-rtos/example-application
+
+Menifest file: Can specify path to Zephyr repo
